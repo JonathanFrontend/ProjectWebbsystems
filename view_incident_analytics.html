@@ -2,27 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewpoint" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>View incident analytics</title>
 </head>
 <body>
     <header>
-        <nav>
+        <nav aria-label="Main navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
+                <li><a href="incident_list.html">Incident list</a></li>
                 <li><a href="create_incident.html">Create incident</a></li>
                 <li><a href="logs_and_analysis.html">Logs and analysis</a></li>
                 <li><a href="manage_user_accounts.html">Manage user accounts</a></li>
-                <li><a href="view_incident_analytics.html">View incident analytics</a></li>
-                <li><a href="view_incident_details.html">View incident and evicence</a></li>
-
+                <li><a href="view_incident_analytics.html">Incident analytics</a></li>
+                <li><a href="view_incident_details.html">Incident details</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h1>Student 3</h1>
-        statistik över incidenterna.
+        <h1>Incident analytics</h1>
+        <p>Explore trends and summaries across reported incidents.</p>
+        <form>
+            <label for="analytics-period">Reporting period</label>
+            <select id="analytics-period" name="period">
+                <option value="">Select a period</option>
+                <option value="week">Last 7 days</option>
+                <option value="month">Last 30 days</option>
+                <option value="year">Last 12 months</option>
+            </select>
+            <button type="submit">Update report</button>
+        </form>
+        <section aria-labelledby="summary-heading">
+            <h2 id="summary-heading">Incident summary</h2>
+            <p>Incident metrics and charts will appear here when data is available.</p>
+        </section>
     </main>
-    <footer></footer>
+    <footer>
+        <p>Incident Response Portal</p>
+    </footer>
 </body>
 </html>

@@ -1,31 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewpoint" content="width=device-width, initial-scale=1">
-    <title>Index</title>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Incident Response Portal</title>
+  </head>
+  <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="create_incident.html">Create incident</a></li>
-                <li><a href="logs_and_analysis.html">Logs and analysis</a></li>
-                <li><a href="manage_user_accounts.html">Manage user accounts</a></li>
-                <li><a href="view_incident_analytics.html">View incident analytics</a></li>
-                <li><a href="view_incident_details.html">View incident and evicence</a></li>
-
-            </ul>
-        </nav>
-        <h1>Inloggning och startsida!</h1>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="incident_list.html">Incident list</a></li>
+          <li><a href="create_incident.html">Create incident</a></li>
+          <li><a href="logs_and_analysis.html">Logs and analysis</a></li>
+          <li><a href="manage_user_accounts.html">Manage user accounts</a></li>
+          <li><a href="view_incident_analytics.html">Incident analytics</a></li>
+          <li><a href="view_incident_details.html">Incident details</a></li>
+        </ul>
+      </nav>
+      <h1>Incident Response Portal</h1>
     </header>
     <main>
-       <h1>Student 1</h1>
-        inloggning och startsida
-
-
+      <section aria-labelledby="welcome-heading">
+        <h2 id="welcome-heading">Welcome</h2>
+        <p>Sign in to report, review, and manage security incidents.</p>
+      </section>
+      <section aria-labelledby="sign-in-heading">
+        <h2 id="sign-in-heading">Sign in</h2>
+        <form>
+          <p>
+            <label for="email">Email address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="username"
+              required
+            />
+          </p>
+          <p>
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              autocomplete="current-password"
+              required
+            />
+          </p>
+          <button type="submit">Sign in</button>
+        </form>
+      </section>
     </main>
-    <footer></footer>
-</body>
+    <footer>
+      <p>Incident Response Portal</p>
+    </footer>
+  </body>
 </html>

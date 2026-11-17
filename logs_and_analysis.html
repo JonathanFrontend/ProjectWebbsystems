@@ -2,28 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewpoint" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Logs and analysis</title>
 </head>
 <body>
     <header>
-        <nav>
+        <nav aria-label="Main navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
+                <li><a href="incident_list.html">Incident list</a></li>
                 <li><a href="create_incident.html">Create incident</a></li>
                 <li><a href="logs_and_analysis.html">Logs and analysis</a></li>
                 <li><a href="manage_user_accounts.html">Manage user accounts</a></li>
-                <li><a href="view_incident_analytics.html">View incident analytics</a></li>
-                <li><a href="view_incident_details.html">View incident and evicence</a></li>
-
+                <li><a href="view_incident_analytics.html">Incident analytics</a></li>
+                <li><a href="view_incident_details.html">Incident details</a></li>
             </ul>
         </nav>
     </header>
     <main>
-    <h1>Student 3</h1>
-        statistik
-
+        <h1>Logs and analysis</h1>
+        <p>Review system activity and analysis results.</p>
+        <section aria-labelledby="filters-heading">
+            <h2 id="filters-heading">Log filters</h2>
+            <form>
+                <p>
+                    <label for="log-start-date">From</label>
+                    <input type="date" id="log-start-date" name="start-date">
+                </p>
+                <p>
+                    <label for="log-end-date">To</label>
+                    <input type="date" id="log-end-date" name="end-date">
+                </p>
+                <p>
+                    <label for="log-category">Category</label>
+                    <select id="log-category" name="category">
+                        <option value="">All categories</option>
+                        <option value="authentication">Authentication</option>
+                        <option value="system">System</option>
+                        <option value="incident">Incident activity</option>
+                    </select>
+                </p>
+                <button type="submit">Apply filters</button>
+            </form>
+        </section>
+        <section aria-labelledby="log-results-heading">
+            <h2 id="log-results-heading">Log entries</h2>
+            <p>Log entries and analysis will appear here.</p>
+        </section>
     </main>
-    <footer></footer>
+    <footer>
+        <p>Incident Response Portal</p>
+    </footer>
 </body>
 </html>
