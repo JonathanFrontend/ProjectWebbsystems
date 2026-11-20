@@ -21,49 +21,71 @@
       </nav>
     </header>
     <main>
-      <h1>Incident list</h1>
-      <p>Review and filter reported incidents.</p>
-      <form>
-        <label for="incident-search">Search incidents</label>
-        <input
-          type="search"
-          id="incident-search"
-          name="search"
-          placeholder="Search by title or ID"
-        />
-        <label for="status-filter">Status</label>
-        <select id="status-filter" name="status">
-          <option value="">All statuses</option>
-          <option value="pending">pending</option>
-          <option value="resolved">Resolved</option>
-        </select>
-        <button type="submit">Filter</button>
-      </form>
-      <table>
-        <caption>
-          Incidents
-        </caption>
-        <thead>
-          <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Title</th>
-            <th scope="col">Severity</th>
-            <th scope="col">Status</th>
-            <th scope="col">Reported</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>id-nummer</td>
-            <td>
-              <a href="view_incident_details.html">no internet</a>
-            </td>
-            <td>High</td>
-            <td>pending</td>
-            <td><time datetime="2025-03-08">March 8, 2025</time></td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="analytics">
+        <h1>Incident analytics</h1>
+        <p>Explore trends and summaries across reported incidents.</p>
+        <form>
+          <label for="analytics-period">Reporting period</label>
+          <select id="analytics-period" name="period">
+            <option value="">Select a period</option>
+            <option value="week">Last 7 days</option>
+            <option value="month">Last 30 days</option>
+            <option value="year">Last 12 months</option>
+          </select>
+          <button type="submit">Update report</button>
+        </form>
+        <section aria-labelledby="summary-heading">
+          <h2>Incident summary</h2>
+          <p>
+            Incident metrics and charts will appear here when data is available.
+          </p>
+        </section>
+      </div>
+      <div class="incident-list">
+        <h1>Incident list</h1>
+        <p>Review and filter reported incidents.</p>
+        <form>
+          <label for="incident-search">Search incidents</label>
+          <input
+            type="search"
+            id="incident-search"
+            name="search"
+            placeholder="Search by title or ID"
+          />
+          <label for="status-filter">Status</label>
+          <select id="status-filter" name="status">
+            <option value="">All statuses</option>
+            <option value="pending">pending</option>
+            <option value="resolved">Resolved</option>
+          </select>
+          <button type="submit">Filter</button>
+        </form>
+        <table>
+          <caption>
+            Incidents
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Title</th>
+              <th scope="col">Severity</th>
+              <th scope="col">Status</th>
+              <th scope="col">Reported</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>id-nummer</td>
+              <td>
+                <a href="view_incident_details.html">no internet</a>
+              </td>
+              <td>High</td>
+              <td>pending</td>
+              <td><time datetime="2025-03-08">March 8, 2025</time></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </main>
     <footer>
       <p>Incident Response Portal</p>

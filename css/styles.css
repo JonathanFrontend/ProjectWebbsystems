@@ -5,7 +5,7 @@ body {
 }
 header nav ul {
     display: flex;
-    background-color: rgb(0, 255, 115);
+    background-color:mediumblue;
     margin: 0;
     align-items: stretch;
 }
@@ -17,12 +17,15 @@ header nav ul li{
 header nav ul li a {
     text-decoration: none;
     display: flex;
-    color: black;
+    color: #fff;
     padding: 20px;
     height: inherit;
     align-items: center;
 }
 header nav ul li a:hover {
-    background-color: rgb(158, 83, 232);
-    color: aliceblue;
+    background-color: aliceblue;
+    color: mediumblue;
+}
+.analytics {
+    background-color: rgb(155, 155, 155);
 }
