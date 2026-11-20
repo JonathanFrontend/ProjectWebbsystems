@@ -4,6 +4,66 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/styles.css">
+    <title>Incident list</title>
+  </head>
+  <body class="splitting">
+    <nav aria-label="Main navigation" id="side-bar">
+        <ul>
+          <li><button onclick="close_sidebar()" class="sidebar-button">X</button></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="incident_list.html">Incident list</a></li>
+          <li><a href="logs_and_analysis.html">Logs and analysis</a></li>
+          <li><a href="manage_user_accounts.html">Manage user accounts</a></li>
+          <li><a href="view_incident_analytics.html">Incident analytics</a></li>
+          <!-- <li><a href="view_incident_details.html">Incident details</a></li> -->
+        </ul>
+    </nav>
+    <header>
+      <button onclick="open_sidebar()" class="sidebar-button">☰</button>
+      <h1>Incident Response Portal</h1>
+      <a href="create_incident.html" class="create_incident">Report incident</a>
+    </header>
+    <main>
+      <h1>Incident details</h1>
+      <p><a href="incident_list.html">Back to incident list</a></p>
+      <article aria-labelledby="incident-title">
+        <header>
+          <p>Example incident - id</p>
+          <h2>No internet</h2>
+          <p><strong>Status:</strong> Pending</p>
+          <p><strong>Severity:</strong> High</p>
+        </header>
+        <dl>
+          <dt>Reported</dt>
+          <dd><time datetime="2025-03-08">March 8, 2025</time></dd>
+          <dt>Affected system</dt>
+          <dd>Who</dd>
+        </dl>
+        <section aria-labelledby="description-heading">
+          <h3>Description</h3>
+          <p>Bad internet, when user tried to login it says not internet</p>
+        </section>
+        <section aria-labelledby="evidence-heading">
+          <h3>Evidence</h3>
+          <p>No evidence attached.</p>
+        </section>
+      </article>
+    </main>
+    <footer>
+      <p>Incident Response Portal</p>
+    </footer>
+    <script src="js/script.js">
+  </script>
+  </body>
+</html>
+
+<!-- 
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/styles.css">
     <title>Incident details</title>
   </head>
   <body>
@@ -12,7 +72,7 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="incident_list.html">Incident list</a></li>
-          <li><a href="create_incident.html">Create incident</a></li>
+          <li><a href="create_incident.html" class="create_incident">Report incident</a></li>
           <li><a href="logs_and_analysis.html">Logs and analysis</a></li>
           <li><a href="manage_user_accounts.html">Manage user accounts</a></li>
           <li><a href="view_incident_analytics.html">Incident analytics</a></li>
@@ -51,3 +111,4 @@
     </footer>
   </body>
 </html>
+ -->

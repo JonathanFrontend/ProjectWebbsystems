@@ -4,6 +4,83 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/styles.css">
+    <title>Incident list</title>
+  </head>
+  <body class="splitting">
+    <nav aria-label="Main navigation" id="side-bar">
+        <ul>
+          <li><button onclick="close_sidebar()" class="sidebar-button">X</button></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="incident_list.html">Incident list</a></li>
+          <li><a href="logs_and_analysis.html">Logs and analysis</a></li>
+          <li><a href="manage_user_accounts.html">Manage user accounts</a></li>
+          <li><a href="view_incident_analytics.html">Incident analytics</a></li>
+          <!-- <li><a href="view_incident_details.html">Incident details</a></li> -->
+        </ul>
+    </nav>
+    <header>
+      <button onclick="open_sidebar()" class="sidebar-button">☰</button>
+      <h1>Incident Response Portal</h1>
+      <a href="create_incident.html" class="create_incident">Report incident</a>
+    </header>
+    <main>
+      <h1>Manage user accounts</h1>
+      <p>
+        Administrators can add users and manage account access here. otherwise
+        this tab will not exist
+      </p>
+      <section aria-labelledby="add-user-heading">
+        <h2>Add a user</h2>
+        <form>
+          <label for="user-name">Name</label> <br />
+          <input
+            type="text"
+            id="user-name"
+            name="name"
+            placeholder="Enter the user's name"
+            required
+          />
+          <br />
+          <label for="user-email">Email address</label> <br />
+          <input
+            type="email"
+            id="user-email"
+            name="email"
+            placeholder="name@example.com"
+            required
+          />
+          <br />
+          <label for="user-role">Role</label> <br />
+          <select id="user-role" name="role" required>
+            <option value="">Select a role</option>
+            <option value="responder">Incident responder</option>
+            <option value="analyst">reporter</option>
+            <option value="admin">Administrator</option>
+          </select>
+          <br />
+          <button type="submit">Add user</button>
+        </form>
+      </section>
+      <section aria-labelledby="user-list-heading">
+        <h2>User accounts</h2>
+        <p>User accounts will appear here.</p>
+      </section>
+    </main>
+    <footer>
+      <p>Incident Response Portal</p>
+    </footer>
+    <script src="js/script.js">
+  </script>
+  </body>
+</html>
+
+<!-- 
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/styles.css">
     <title>Manage user account</title>
   </head>
   <body>
@@ -12,7 +89,7 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="incident_list.html">Incident list</a></li>
-          <li><a href="create_incident.html">Create incident</a></li>
+          <li><a href="create_incident.html" class="create_incident">Report incident</a></li>
           <li><a href="logs_and_analysis.html">Logs and analysis</a></li>
           <li><a href="manage_user_accounts.html">Manage user accounts</a></li>
           <li><a href="view_incident_analytics.html">Incident analytics</a></li>
@@ -68,3 +145,4 @@
     </footer>
   </body>
 </html>
+ -->
